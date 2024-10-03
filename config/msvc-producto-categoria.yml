@@ -1,0 +1,22 @@
+server:
+  port: 0  # El puerto será asignado dinámicamente
+
+spring:
+  application:
+    name: msvc-producto-categoria  # Nombre del servicio
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/  # URL del Eureka Server
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/microservice-soa-db
+    username: microservice-soa
+    password: kiones
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
