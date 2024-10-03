@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://postgres:5432/microservice-soa-db  # Nombre del servicio de Postgres en Docker
+    url: jdbc:postgresql://localhost:5432/microservice-soa-db  # Nombre del servicio de Postgres en Docker
     username: microservice-soa
     password: kiones
 
