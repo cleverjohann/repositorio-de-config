@@ -1,5 +1,5 @@
 server:
-  port: 0  # Puerto dinámico para que Docker asigne automáticamente el puerto
+  port: 8040  # Puerto fijo para la aplicación
 spring:
   application:
     name: msvc-producto-categoria
