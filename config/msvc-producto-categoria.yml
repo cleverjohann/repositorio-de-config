@@ -1,6 +1,8 @@
 server:
   port: 0  # Puerto dinámico para que Docker asigne automáticamente el puerto
-
+spring:
+  application:
+    name: msvc-producto-categoria
 
 eureka:
   client:
