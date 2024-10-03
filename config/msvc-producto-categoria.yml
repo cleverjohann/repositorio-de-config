@@ -1,18 +1,7 @@
 server:
   port: 0  # Puerto dinámico para que Docker asigne automáticamente el puerto
 
-spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/microservice-soa-db  # Nombre del servicio de Postgres en Docker
-    username: microservice-soa
-    password: kiones
 
-  jpa:
-    hibernate:
-      ddl-auto: update  # Actualización automática de tablas durante el desarrollo
-    database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
 eureka:
   client:
     service-url:
