@@ -13,3 +13,7 @@ spring:
       ddl-auto: update  # Actualización automática de tablas durante el desarrollo
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/  # Conexión al Eureka Server
