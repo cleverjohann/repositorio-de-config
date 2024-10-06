@@ -1,20 +1,23 @@
+#Esta configuracion es para desarrollo
 server:
-  port: 8040  # Puerto fijo para la aplicación
+  port: 0  # El puerto será asignado dinámicamente
+
 spring:
   application:
-    name: msvc-producto-categoria
+    name: msvc-inventario  # Nombre del servicio
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # URL del Eureka Server
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://c3cj4hehegopde.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d2bk6cpec8mr53  # Nueva URL de la base de datos
     username: u3a2ld53s0u99a  # Nuevo usuario
     password: pf0a8e17fc88c4945cc0c1881a5d589aff5064f25657f14ba2d7f7af9e3ead197  # Nueva contraseña
-
   jpa:
     hibernate:
-      ddl-auto: update    
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
