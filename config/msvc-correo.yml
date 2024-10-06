@@ -1,0 +1,12 @@
+server:
+  port: 9031  # Puerto fijo para la aplicación
+spring:
+  application:
+    name: msvc-correo
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
