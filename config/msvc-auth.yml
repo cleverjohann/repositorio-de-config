@@ -8,13 +8,13 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa  # Nueva URL de la base de datos
-    username: postrgres  # Nuevo usuario
+    username: postgres  # Nuevo usuario
     password: admin123  # Nueva contraseña
 
   jpa:
     hibernate:
       ddl-auto: update
-    database: postgresql
+    database: soa
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 eureka:
   instance:
