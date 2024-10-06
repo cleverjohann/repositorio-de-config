@@ -5,9 +5,9 @@ spring:
     name: msvc-producto-categoria
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://c3cj4hehegopde.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d2bk6cpec8mr53  # Nueva URL de la base de datos
-    username: u3a2ld53s0u99a  # Nuevo usuario
-    password: pf0a8e17fc88c4945cc0c1881a5d589aff5064f25657f14ba2d7f7af9e3ead197  # Nueva contraseña
+    url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa  # Nueva URL de la base de datos
+    username: postrgres  # Nuevo usuario
+    password: admin123  # Nueva contraseña
 
   jpa:
     hibernate:
