@@ -11,9 +11,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
-    database: soa
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update    
 eureka:
   instance:
     hostname: localhost
