@@ -2,7 +2,7 @@ server:
   port: 9033  # Puerto fijo para la aplicación
 spring:
   application:
-    name: msvc-usuario
+    name: msvc-carrito
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa  # Nueva URL de la base de datos
