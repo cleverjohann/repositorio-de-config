@@ -1,0 +1,20 @@
+server:
+  port: 9034  # Puerto fijo para la aplicación
+spring:
+  application:
+    name: msvc-pedido
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa  # Nueva URL de la base de datos
+    username: postgres  # Nuevo usuario
+    password: admin123  # Nueva contraseña
+
+  jpa:
+    hibernate:
+      ddl-auto: update    
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
