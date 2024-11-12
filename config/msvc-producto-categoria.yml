@@ -3,18 +3,5 @@ server:
 spring:
   application:
     name: msvc-producto-categoria
-  spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa
-    username: postgres
-    password: Admin123
-  jpa:
-    hibernate:
-      ddl-auto: update   
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
+  config:
+    import: "classpath:/config/common.yml"
