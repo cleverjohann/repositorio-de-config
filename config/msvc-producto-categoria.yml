@@ -4,4 +4,4 @@ spring:
   application:
     name: msvc-producto-categoria
   config:
-    import: "classpath:/config/common.yml"
+    import: "classpath:/common.yml"
