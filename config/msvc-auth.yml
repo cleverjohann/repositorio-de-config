@@ -5,8 +5,12 @@ server:
 spring:
   application:
     name: msvc-auth
-  config:
-    import: "classpath:/config/common.yml"
+  spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa
+    username: postgres
+    password: Admin123
 
   jpa:
     hibernate:
