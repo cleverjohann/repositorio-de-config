@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa
+    username: postgres
+    password: admin123
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/

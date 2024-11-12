@@ -11,7 +11,7 @@ spring:
         - id: producto-categoria-service # ID del servicio en docker-compose.yml
           uri: lb://producto-categoria-service # Usar balanceador de carga
           predicates:
-            - Path=/api/productos/**
+            - Path=/api/productos/**|
             - Path=/api/categorias/**
         - id: usuario-service
           uri: lb://usuario-service

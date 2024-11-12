@@ -3,11 +3,8 @@ server:
 spring:
   application:
     name: msvc-producto-categoria
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa  # Nueva URL de la base de datos
-    username: postgres  # Nuevo usuario
-    password: admin123  # Nueva contraseña
+  config:
+    import: "classpath:/config/common.yml"
 
   jpa:
     hibernate:
