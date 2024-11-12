@@ -3,7 +3,7 @@ spring:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://soa.c904q64o6yfq.us-east-2.rds.amazonaws.com:5432/soa
     username: postgres
-    password: admin123
+    password: Admin123
   jpa:
     hibernate:
       ddl-auto: update

@@ -5,13 +5,3 @@ spring:
     name: msvc-producto-categoria
   config:
     import: "classpath:/config/common.yml"
-
-  jpa:
-    hibernate:
-      ddl-auto: update    
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://eureka-server:8761/eureka/
