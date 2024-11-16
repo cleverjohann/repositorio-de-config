@@ -5,27 +5,40 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
-          lower-case-service-id: true # Convertir los IDs de servicio a minúsculas
+          enabled: true  # Habilita la resolución dinámica a través de Eureka
       routes:
-        - id: producto-categoria-service # ID del servicio en docker-compose.yml
-          uri: lb://producto-categoria-service # Usar balanceador de carga
+        - id: producto-categoria-service
+          uri: lb://producto-categoria-service  # Load Balancer URI apuntando al servicio
           predicates:
-            - Path=/api/productos/**|
-            - Path=/api/categorias/**
+            - Path=/producto-categoria/**
+        - id: correo-service
+          uri: lb://correo-service
+          predicates:
+            - Path=/correo/**
         - id: usuario-service
           uri: lb://usuario-service
           predicates:
-            - Path=/api/usuarios/**
+            - Path=/usuario/**
         - id: auth-service
           uri: lb://auth-service
           predicates:
             - Path=/auth/**
-        - id: correo-service
-          uri: lb://correo-service
+        - id: carrito-service
+          uri: lb://carrito-service
           predicates:
-           - Path=/enviar-correo/**
+            - Path=/carrito/**
+        - id: reserva-inventario-service
+          uri: lb://reserva-inventario-service
+          predicates:
+            - Path=/reserva-inventario/**
+        - id: pedido-service
+          uri: lb://pedido-service
+          predicates:
+            - Path=/pedido/**
+
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server:8761/eureka/ # Usar el nombre del servicio de Eureka en docker-compose
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true  # Usa la dirección IP en lugar del nombre de host
