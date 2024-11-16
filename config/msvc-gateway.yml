@@ -8,25 +8,9 @@ spring:
           enabled: true
       routes:
         - id: productos
-          uri: http://producto-categoria-service:8040
+          uri: lb://producto-categoria-service
           predicates:
             - Path=/api/productos/**
-        - id: categorias
-          uri: http://producto-categoria-service:8040
-          predicates:
-            - Path=/api/categorias/**
-        - id: usuarios
-          uri: http://usuario-service:9030
-          predicates:
-            - Path=/api/usuarios/**
-        - id: auth
-          uri: http://auth-service:9032
-          predicates:
-            - Path=/auth/**
-        - id: correo
-          uri: http://correo-service:9031
-          predicates:
-           - Path=/enviar-correo/**
 eureka:
   client:
     register-with-eureka: false
