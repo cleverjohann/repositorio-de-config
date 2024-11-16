@@ -10,7 +10,11 @@ spring:
         - id: producto-categoria-service
           uri: lb://producto-categoria-service  # Load Balancer URI apuntando al servicio
           predicates:
-            - Path=/producto-categoria/**
+            - Path=/api/productos/**
+        - id: producto-categoria-service
+          uri: lb://producto-categoria-service
+          predicates:
+            - Path=/api/categorias/**
         - id: correo-service
           uri: lb://correo-service
           predicates:
