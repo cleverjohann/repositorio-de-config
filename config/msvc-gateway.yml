@@ -5,12 +5,16 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
+          enabled: true  # Habilita la resolución dinámica a través de Eureka
       routes:
-        - id: productos
-          uri: lb://producto-categoria-service
+        - id: producto-service
+          uri: lb://producto-service  # Load Balancer URI apuntando al servicio
           predicates:
             - Path=/api/productos/**
+
 eureka:
   client:
-    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true  # Usa la dirección IP en lugar del nombre de host
